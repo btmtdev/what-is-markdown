@@ -37,6 +37,14 @@ A knowledge base explaining Markdown — what it is, how to write it, why it mat
 | 12 | [Deployment Architecture](examples/monorepo/docs/deployment.md) | Hybrid on-prem/cloud with horizontal split DNS |
 | 13 | [Docker Compose](examples/monorepo/infra/docker-compose.yml) | Local development stack |
 
+### 🇹🇭 ภาษาไทย (Thai Version)
+
+| # | ไฟล์ | รายละเอียด |
+|---|------|-----------|
+| 1 | [Markdown คืออะไร?](th/what-is-markdown.md) | ภาพรวม, จุดประสงค์, ทำไม AI Agent ต้องใช้ |
+| 2 | [คู่มือ Syntax](th/syntax.md) | คู่มือ syntax ฉบับสมบูรณ์ |
+| 3 | [มี vs ไม่มี Markdown](th/markdown-vs-no-markdown.md) | เปรียบเทียบผลกระทบสำหรับ developer และ AI agent |
+
 ## License
 
 MIT

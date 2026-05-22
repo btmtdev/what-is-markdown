@@ -13,6 +13,7 @@ A knowledge base explaining Markdown — what it is, how to write it, why it mat
 | 3 | With vs Without Markdown | [markdown-vs-no-markdown.md](markdown-vs-no-markdown.md) | [markdown-vs-no-markdown.md](th/markdown-vs-no-markdown.md) |
 | 4 | Real-World Examples from Internet | [internet-examples.md](internet-examples.md) | — |
 | 5 | เขียน CLAUDE.md ให้ประหยัด Token | — | [optimize-token-usage.md](th/optimize-token-usage.md) |
+| 6 | Claude Code Slash Commands | — | [claude-slash-commands.md](th/claude-slash-commands.md) |
 
 ### Examples — Standard Files
 

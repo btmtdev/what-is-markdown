@@ -1,0 +1,123 @@
+# Claude Code Slash Commands
+
+คู่มือคำสั่ง Slash Commands สำหรับ Claude Code — คำสั่งทั่วไป, คำสั่งแนะนำ, และ best practices
+
+---
+
+## คำสั่งทั้งหมด
+
+| คำสั่ง | ทำอะไร |
+|--------|--------|
+| `/help` | แสดงรายการคำสั่งทั้งหมด |
+| `/init` | สำรวจ codebase แล้วสร้าง CLAUDE.md เริ่มต้น |
+| `/clear` | ล้างประวัติสนทนา เริ่มใหม่ (alias: `/reset`, `/new`) |
+| `/compact` | สรุปบทสนทนาเพื่อเพิ่มพื้นที่ context |
+| `/btw` | ถามคำถามข้างทางโดยไม่กิน context หลัก |
+| `/rewind` | ย้อนกลับไปจุด checkpoint ก่อนหน้า |
+| `/model` | ดูหรือเปลี่ยน model ที่ใช้ |
+| `/cost` | แสดง token ที่ใช้ไปและค่าใช้จ่ายใน session นี้ |
+| `/usage` | แสดง usage limits และ rate-limit status |
+| `/context` | แสดงว่า context window ถูกใช้ไปกับอะไรบ้าง |
+| `/memory` | ดูหรือแก้ไข CLAUDE.md |
+| `/add-dir` | เพิ่ม directory ให้ Claude เข้าถึงได้ |
+| `/permissions` | ดูหรือเปลี่ยนสิทธิ์ที่ต้องขออนุมัติ |
+| `/config` | เปิดการตั้งค่า (alias: `/settings`) |
+| `/plan` | เข้า Plan Mode (อ่านอย่างเดียว ไม่แก้ไฟล์) |
+| `/diff` | ดู uncommitted changes แบบ interactive |
+| `/copy` | คัดลอก response ล่าสุดไปที่ clipboard |
+| `/export` | บันทึกบทสนทนาเป็นไฟล์ |
+| `/mcp` | จัดการ MCP server connections |
+| `/agents` | จัดการ subagents |
+| `/hooks` | ดู hook configuration |
+| `/skills` | แสดง skills ที่ใช้ได้ใน session นี้ |
+| `/simplify` | ตรวจสอบโค้ดที่เพิ่งแก้ แล้วปรับปรุงให้ดีขึ้น |
+| `/status` | แสดง account, model, directory, version |
+| `/doctor` | วินิจฉัยปัญหาการติดตั้ง |
+| `/feedback` | รายงานปัญหาไปที่ Anthropic (alias: `/bug`) |
+| `/resume` | เปิด session เก่าต่อ (alias: `/continue`) |
+| `/login` / `/logout` | เข้าสู่ระบบ / ออกจากระบบ |
+| `/exit` | ออกจาก CLI (alias: `/quit`) |
+
+---
+
+## ⭐ คำสั่งแนะนำ (Best & Most Used)
+
+### 🟢 ใช้บ่อยที่สุด (ทุกวัน)
+
+| คำสั่ง | เมื่อไหร่ควรใช้ |
+|--------|----------------|
+| `/compact` | เมื่อทำงานนานแล้ว context เริ่มเต็ม — ประหยัด token ได้มาก |
+| `/clear` | เมื่อเปลี่ยนงาน/task ใหม่ — เริ่มสะอาด ไม่สับสน |
+| `/cost` | เช็คว่าใช้ token ไปเท่าไหร่แล้ว — ควบคุมค่าใช้จ่าย |
+| `/plan` | เมื่อต้องการให้ Claude วิเคราะห์ก่อนลงมือทำ |
+| `/diff` | ดูว่า Claude แก้อะไรไปบ้างก่อน commit |
+
+### 🔵 ใช้เป็นประจำ (สัปดาห์ละหลายครั้ง)
+
+| คำสั่ง | เมื่อไหร่ควรใช้ |
+|--------|----------------|
+| `/init` | เริ่มโปรเจคใหม่ — ให้ Claude สร้าง CLAUDE.md ให้ |
+| `/memory` | เพิ่มกฎหรือ context ใหม่เข้า CLAUDE.md |
+| `/context` | เมื่อ Claude เริ่มลืมสิ่งที่บอกไป — ดูว่า context เหลือเท่าไหร่ |
+| `/rewind` | เมื่อ Claude ทำผิดทาง — ย้อนกลับแทนที่จะแก้ทับ |
+| `/model` | เปลี่ยนเป็น model ถูกกว่าสำหรับงานง่ายๆ |
+
+### 🟡 ใช้เมื่อจำเป็น
+
+| คำสั่ง | เมื่อไหร่ควรใช้ |
+|--------|----------------|
+| `/btw` | ถามคำถามเล็กๆ ระหว่างทำงานใหญ่ — ไม่รบกวน context |
+| `/simplify` | หลังเขียนโค้ดเสร็จ — ให้ Claude refactor ให้กระชับ |
+| `/permissions` | ตั้งค่าให้ Claude ทำงานบางอย่างได้โดยไม่ต้องถาม |
+| `/resume` | กลับมาทำงานต่อจาก session เมื่อวาน |
+
+---
+
+## Keyboard Shortcuts
+
+| ปุ่ม | ทำอะไร |
+|------|--------|
+| `Shift + Tab` | สลับ mode: default → acceptEdits → plan |
+| `Esc` | หยุด Claude กลางคัน |
+| `Esc, Esc` | เปิดเมนู rewind/checkpoint |
+| `Ctrl + C` | ยกเลิก input ปัจจุบัน |
+| `Ctrl + R` | ค้นหาย้อนหลังใน prompt history |
+| `@` + path | อ้างอิงไฟล์ใน prompt |
+| `/` | เปิดเมนูคำสั่ง |
+
+---
+
+## Best Practices สำหรับประหยัด Token
+
+### Workflow แนะนำ
+
+```
+1. เริ่ม session → /init (ครั้งแรก) หรือเริ่มทำงานเลย
+2. ทำงานไปเรื่อยๆ
+3. context เริ่มเต็ม → /compact
+4. เปลี่ยน task → /clear
+5. จบวัน → /cost เช็คค่าใช้จ่าย
+```
+
+### ✅ ควรทำ
+
+- ใช้ `/compact` ก่อน context เต็ม (ดูจาก indicator)
+- ใช้ `/clear` เมื่อเปลี่ยน task — อย่าทำหลาย task ใน session เดียว
+- ใช้ `/plan` ก่อนงานใหญ่ — ให้ Claude คิดก่อนทำ ลดการ redo
+- ใช้ `/btw` สำหรับคำถามเล็กๆ — ไม่กิน context หลัก
+- ใช้ `/model` เปลี่ยนเป็น Haiku สำหรับงานง่ายๆ (ถูกกว่า 10x)
+
+### ❌ ไม่ควรทำ
+
+- ทำหลาย task ใน session เดียวจนยาวมาก — context เต็ม = ลืมข้อมูล
+- ไม่เคยใช้ `/compact` — ปล่อยให้ auto-compact (สูญเสียข้อมูลมากกว่า)
+- วาง code ยาวๆ ใน prompt — ใช้ `@file.ts` อ้างอิงแทน
+- ถามคำถามทั่วไปที่ไม่เกี่ยวกับ project — กิน token เปล่า
+- ไม่ตั้ง CLAUDE.md — ต้องอธิบายซ้ำทุก session
+
+---
+
+## อ้างอิง
+
+- [Claude Code Cheatsheet — Anthropic](https://support.claude.com/en/articles/14553413-claude-code-cheatsheet)
+- [Claude Code CLI Usage — Docs](https://docs.anthropic.com/en/docs/claude-code/cli-usage)

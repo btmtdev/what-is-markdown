@@ -37,6 +37,31 @@ A knowledge base explaining Markdown — what it is, how to write it, why it mat
 | 12 | Deployment Architecture | [deployment.md](examples/monorepo/docs/deployment.md) | [deployment.md](th/examples/monorepo/docs/deployment.md) |
 | 13 | Docker Compose | [docker-compose.yml](examples/monorepo/infra/docker-compose.yml) | [docker-compose.yml](th/examples/monorepo/infra/docker-compose.yml) |
 
+## แหล่งเรียนรู้เพิ่มเติม (References)
+
+| แหล่งข้อมูล | รายละเอียด |
+|-------------|-----------|
+| [Markdown Guide](https://www.markdownguide.org/) | คู่มือ Markdown ฉบับสมบูรณ์ (อังกฤษ) |
+| [GitHub Docs — Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | Syntax ที่ใช้ได้บน GitHub |
+| [CommonMark Spec](https://commonmark.org/) | มาตรฐาน Markdown ที่เป็นทางการ |
+| [Dillinger](https://dillinger.io/) | เครื่องมือเขียน Markdown ออนไลน์ ดู preview แบบ real-time |
+| [StackEdit](https://stackedit.io/) | Editor ออนไลน์ รองรับ sync กับ Google Drive / GitHub |
+| [Marp](https://marp.app/) | สร้าง Presentation จาก Markdown |
+| [Obsidian](https://obsidian.md/) | แอปจดบันทึกด้วย Markdown พร้อม graph view |
+| [Typora](https://typora.io/) | WYSIWYG Markdown editor สำหรับ desktop |
+
+### บทความภาษาไทย
+
+- [สอน Markdown เบื้องต้น — BorntoDev](https://www.borntodev.com/2022/01/13/markdown/)
+- [Markdown คืออะไร ใช้ยังไง — Medium @mikkipastel](https://medium.com/@mikkipastel/markdown-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-b6e7fc9e6e0d)
+- [เขียน README.md ให้สวยงาม — DevDream](https://devdream.dev/blog/how-to-write-readme)
+
+### เครื่องมือที่แนะนำสำหรับมือใหม่
+
+1. **VS Code** + Extension "Markdown All in One" — เขียนและ preview ได้ในตัว
+2. **Obsidian** — เหมาะสำหรับจดบันทึกและสร้าง knowledge base
+3. **GitHub** — ลองเขียน README.md ใน repo ของตัวเองเลย
+
 ## License
 
 MIT

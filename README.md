@@ -12,6 +12,7 @@ A knowledge base explaining Markdown — what it is, how to write it, why it mat
 | 2 | Syntax Reference | [syntax.md](syntax.md) | [syntax.md](th/syntax.md) |
 | 3 | With vs Without Markdown | [markdown-vs-no-markdown.md](markdown-vs-no-markdown.md) | [markdown-vs-no-markdown.md](th/markdown-vs-no-markdown.md) |
 | 4 | Real-World Examples from Internet | [internet-examples.md](internet-examples.md) | — |
+| 5 | เขียน CLAUDE.md ให้ประหยัด Token | — | [optimize-token-usage.md](th/optimize-token-usage.md) |
 
 ### Examples — Standard Files
 

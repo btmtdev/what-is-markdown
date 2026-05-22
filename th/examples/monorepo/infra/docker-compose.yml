@@ -1,0 +1,48 @@
+# Docker Compose สำหรับพัฒนาในเครื่อง
+# เริ่มด้วย: docker compose up -d
+
+services:
+  # เว็บ Frontend (Next.js)
+  web:
+    build:
+      context: ../apps/web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://api:5000/api
+    depends_on:
+      - api
+
+  # Backend API (.NET Core)
+  api:
+    build:
+      context: ../apps/api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Server=db;Database=AppDb;User=sa;Password=YourPass123!;TrustServerCertificate=true
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ฐานข้อมูล SQL Server
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourPass123!
+    volumes:
+      - sqldata:/var/opt/mssql
+    healthcheck:
+      test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "YourPass123!" -C -Q "SELECT 1"
+      interval: 10s    # ตรวจสอบทุก 10 วินาที
+      timeout: 5s      # หมดเวลาใน 5 วินาที
+      retries: 5       # ลองใหม่ 5 ครั้ง
+
+volumes:
+  sqldata:

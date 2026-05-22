@@ -16,26 +16,26 @@ A knowledge base explaining Markdown — what it is, how to write it, why it mat
 
 | # | File | 🇺🇸 English | 🇹🇭 ภาษาไทย |
 |---|------|-------------|------------|
-| 4 | README.md | [examples/README.md](examples/README.md) | — |
-| 5 | CHANGELOG.md | [examples/CHANGELOG.md](examples/CHANGELOG.md) | — |
-| 6 | CONTRIBUTING.md | [examples/CONTRIBUTING.md](examples/CONTRIBUTING.md) | — |
-| 7 | AGENTS.md | [examples/AGENTS.md](examples/AGENTS.md) | — |
-| 8 | CLAUDE.md | [examples/CLAUDE.md](examples/CLAUDE.md) | — |
+| 4 | README.md | [examples/README.md](examples/README.md) | [th/examples/README.md](th/examples/README.md) |
+| 5 | CHANGELOG.md | [examples/CHANGELOG.md](examples/CHANGELOG.md) | [th/examples/CHANGELOG.md](th/examples/CHANGELOG.md) |
+| 6 | CONTRIBUTING.md | [examples/CONTRIBUTING.md](examples/CONTRIBUTING.md) | [th/examples/CONTRIBUTING.md](th/examples/CONTRIBUTING.md) |
+| 7 | AGENTS.md | [examples/AGENTS.md](examples/AGENTS.md) | [th/examples/AGENTS.md](th/examples/AGENTS.md) |
+| 8 | CLAUDE.md | [examples/CLAUDE.md](examples/CLAUDE.md) | [th/examples/CLAUDE.md](th/examples/CLAUDE.md) |
 
 ### Examples — Kiro Agent Files
 
 | # | File | 🇺🇸 English | 🇹🇭 ภาษาไทย |
 |---|------|-------------|------------|
-| 9 | Steering: Coding Standards | [coding-standards.md](examples/.kiro/steering/coding-standards.md) | — |
-| 10 | Skill: Create API Endpoint | [create-api-endpoint.md](examples/.kiro/skills/create-api-endpoint.md) | — |
+| 9 | Steering: Coding Standards | [coding-standards.md](examples/.kiro/steering/coding-standards.md) | [coding-standards.md](th/examples/.kiro/steering/coding-standards.md) |
+| 10 | Skill: Create API Endpoint | [create-api-endpoint.md](examples/.kiro/skills/create-api-endpoint.md) | [create-api-endpoint.md](th/examples/.kiro/skills/create-api-endpoint.md) |
 
 ### Examples — Monorepo (Next.js + .NET + SQL Server)
 
 | # | File | 🇺🇸 English | 🇹🇭 ภาษาไทย |
 |---|------|-------------|------------|
-| 11 | Monorepo README | [README.md](examples/monorepo/README.md) | — |
-| 12 | Deployment Architecture | [deployment.md](examples/monorepo/docs/deployment.md) | — |
-| 13 | Docker Compose | [docker-compose.yml](examples/monorepo/infra/docker-compose.yml) | — |
+| 11 | Monorepo README | [README.md](examples/monorepo/README.md) | [README.md](th/examples/monorepo/README.md) |
+| 12 | Deployment Architecture | [deployment.md](examples/monorepo/docs/deployment.md) | [deployment.md](th/examples/monorepo/docs/deployment.md) |
+| 13 | Docker Compose | [docker-compose.yml](examples/monorepo/infra/docker-compose.yml) | [docker-compose.yml](th/examples/monorepo/infra/docker-compose.yml) |
 
 ## License
 

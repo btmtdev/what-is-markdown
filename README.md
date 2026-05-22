@@ -52,9 +52,9 @@ A knowledge base explaining Markdown — what it is, how to write it, why it mat
 
 ### บทความภาษาไทย
 
-- [สอน Markdown เบื้องต้น — BorntoDev](https://www.borntodev.com/2022/01/13/markdown/)
-- [Markdown คืออะไร ใช้ยังไง — Medium @mikkipastel](https://medium.com/@mikkipastel/markdown-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-b6e7fc9e6e0d)
-- [เขียน README.md ให้สวยงาม — DevDream](https://devdream.dev/blog/how-to-write-readme)
+- [วิธีการใช้ Markdown ง่ายๆ — Classmethod Thailand](https://dev.classmethod.jp/articles/how-to-use-markdown-simply/)
+- [Markdown Cheatsheet — GitHub Wiki](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet)
+- [The Ultimate Guide to Markdown — GitHub Gist](https://gist.github.com/cuonggt/9b7d08a597b167299f0d)
 
 ### เครื่องมือที่แนะนำสำหรับมือใหม่
 
